@@ -2,7 +2,7 @@ package auth_test
 
 import (
 	"testing"
-	"todo/internal/auth"
+	"todo/internal/service/auth"
 
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
