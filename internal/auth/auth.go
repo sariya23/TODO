@@ -65,7 +65,7 @@ func LoginUser(u User, storage UserGetter) error {
 
 	err = bcrypt.CompareHashAndPassword([]byte(password), []byte(u.Password))
 	if err != nil {
-		return fmt.Errorf("%v: wrong creds", op)
+		return fmt.Errorf("%v: %w", op, ErrUserNotExists)
 	}
 	return nil
 }
